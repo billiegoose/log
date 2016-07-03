@@ -1,6 +1,7 @@
 require 'clarify'
 stackTrace = require 'stack-trace'
-require 'coffee-errors'
+try
+  require 'coffee-errors'
 PrettyError = require('pretty-error')
 pe = new PrettyError()
 pe.skipNodeFiles()
