@@ -1,6 +1,6 @@
 {
   "name": "@wmhilton/log",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A console.log replacement",
   "main": "log",
   "scripts": {
