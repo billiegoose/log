@@ -45,4 +45,10 @@ log.once('fatal', function(e) {
 ```
 
 # Example output
-todo
+Screenshot of the colorized log levels, using Solarized terminal color scheme:
+
+![capture](https://cloud.githubusercontent.com/assets/587740/16549013/03c57abc-4168-11e6-890b-6f0b72001c5f.PNG)
+
+Example of a pretty error stack:
+
+![image](https://cloud.githubusercontent.com/assets/587740/16549085/e64500d8-4168-11e6-8db3-c04a266bbed1.png)
