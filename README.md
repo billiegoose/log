@@ -4,7 +4,7 @@ This may not be everyone's cup o' tea, but this is the library I've written for 
 ## Improvements over `console.log`
  - **Timestamps** (with optional timezone configuration)
  - **Filename and line number** of the caller
-   - Gets correct line numbers for CoffeeScript (using [`coffee-errors`](https://www.npmjs.com/package/coffee-errors))
+   - **CoffeeScript** files have correct line numbers too (using [`coffee-errors`](https://www.npmjs.com/package/coffee-errors))
  - **Colored** log levels (using [`chalk`](https://www.npmjs.com/package/chalk))
  - **Objects and arrays** are pretty-printed using JSON.stringify instead of `[object Object]`
  - **Error** objects are pretty printed (using [`pretty-error`](https://www.npmjs.com/package/pretty-error))
