@@ -1,17 +1,19 @@
 # log
-This may not be everyone's cup o' tea, but this is the library I've written for console.log-style debugging. Features include:
- - Timestamps (with optional timezone configuration)
- - Filename and line number of the caller
-   - Gets correct line numbers for CoffeeScript (using [`coffee-errors`](https://www.npmjs.com/package/coffee-errors) module)
- - Colored log levels (using [`chalk`](https://www.npmjs.com/package/chalk) module)
- - Truncate long strings and arrays with ...
- - Pretty-prints Objects instead of printing [object Object]
- - Pretty-prints Error objects (using [`pretty-error`](https://www.npmjs.com/package/pretty-error) module)
-   - prints long stack traces (using the [`stack-trace`](https://www.npmjs.com/package/stack-trace) and [`clarify`](https://www.npmjs.com/package/clarify) modules)
- - An EventEmitter interface so you can listen for log messages (say, to copy all messages to the Captain's log, or perform evasive manuvers on 'error' and 'fatal' messages)
- - 'filename' option to redirect logging to a file instead of stdout
- - 'quiet' option to turn off logging when its not desired.
+This may not be everyone's cup o' tea, but this is the library I've written for console.log-style debugging.
 
+## Improvements over `console.log`
+ - **Timestamps** (with optional timezone configuration)
+ - **Filename and line number** of the caller
+   - Gets correct line numbers for CoffeeScript (using [`coffee-errors`](https://www.npmjs.com/package/coffee-errors))
+ - **Colored** log levels (using [`chalk`](https://www.npmjs.com/package/chalk))
+ - **Objects and arrays** are pretty-printed using JSON.stringify instead of `[object Object]`
+ - **Error** objects are pretty printed (using [`pretty-error`](https://www.npmjs.com/package/pretty-error))
+   - **Long stack traces** included (using the [`stack-trace`](https://www.npmjs.com/package/stack-trace) and [`clarify`](https://www.npmjs.com/package/clarify))
+ - **Smart truncation** of long strings and arrays
+ - **'quiet'** option to quickly turn logging off/on
+ - **'filename'** option to write directly to a file instead of stdout
+ - **EventEmitter** interface so you can listen for log messages (say, to copy all messages to the Captain's log, or perform evasive manuvers on 'error' and 'fatal' messages)
+ 
 # Usage
 ```js
 // A single, global log object. Don't call with "new".
