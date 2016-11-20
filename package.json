@@ -2,10 +2,9 @@
   "name": "@wmhilton/log",
   "version": "1.0.2",
   "description": "A console.log replacement",
-  "main": "log",
+  "main": "log.js",
   "scripts": {
-    "test": "mocha",
-    "prepublish": "coffee -c ./"
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
