@@ -13,7 +13,7 @@ This may not be everyone's cup o' tea, but this is the library I've written for 
  - **'quiet'** option to quickly turn logging off/on
  - **'filename'** option to write directly to a file instead of stdout
  - **EventEmitter** interface so you can listen for log messages (say, to copy all messages to the Captain's log, or perform evasive manuvers on 'error' and 'fatal' messages)
- 
+
 # Usage
 ```js
 // A single, global log object. Don't call with "new".
@@ -21,19 +21,21 @@ log = require('log')
 
 // Calling setup is optional.
 log.setup({
-  filename: String   // optional, if specified writes to file instead of stdout
+  filename: String   // optional, if specified writes to file instead of stdout (has precedence over `stdout`)
   quiet: Bool        // optional, default false, if true turns disables output but still triggers events
-  timezone: String   // optional, defaults to "America/New_York" 
+  timezone: String   // optional, defaults to "America/New_York"
   colors: Bool       // optional, default is chalk's autodetect behavior
+  stdout: Stream     // optional, if specified log writes to a Writable Stream instead of process.stdout (since v1.1.0)
+  cutoffLength: Number // optional, default 250, the length to truncate long strings (since v1.1.0)
 })
 
 // Available log methods
-log.log(args...) 
-log.debug(args...) 
-log.info(args...) 
-log.warn(args...) 
-log.err(args...) 
-log.fatal(args...) 
+log.log(args...)
+log.debug(args...)
+log.info(args...)
+log.warn(args...)
+log.err(args...)
+log.fatal(args...)
 
 // Event listener example(s)
 log.on('err', function(e) {

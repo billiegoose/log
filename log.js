@@ -15,11 +15,9 @@ const prettyprint = require('./lib/prettyprint')
 
 let settings = {
   stdout: process.stdout,
-  filename: null,
   quiet: false,
   timezone: "America/New_York",
   cutoffLength: 250,
-  color: null,
 }
 
 function write (text) {
@@ -67,8 +65,8 @@ const Log = new EventEmitter
 Log.setup = (opts) => {
   Object.assign(settings, opts)
   moment.tz.setDefault(settings.timezone)
-  if (opts.hasOwnProperty('colors')) {
-    chalk.enabled = opts.colors
+  if (settings.hasOwnProperty('colors')) {
+    chalk.enabled = settings.colors
   }
 }
 
